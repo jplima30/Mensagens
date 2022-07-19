@@ -5,9 +5,88 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Color Picker View Controller-->
+        <scene sceneID="Vvt-Q2-gGp">
+            <objects>
+                <viewController id="BDr-eZ-zgI" customClass="ColorPickerViewController" customModule="Mensagens" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7fh-h7-lR4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUu-hF-cAD">
+                                <rect key="frame" x="87" y="278" width="240" height="340"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bLl-MH-EKi">
+                                        <rect key="frame" x="20" y="153" width="200" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changeColor:" destination="BDr-eZ-zgI" eventType="valueChanged" id="fmO-iA-2eo"/>
+                                        </connections>
+                                    </slider>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-ju-JzO">
+                                        <rect key="frame" x="8" y="8" width="232" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5GE-Dy-55w">
+                                        <rect key="frame" x="20" y="191" width="200" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                        <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="changeColor:" destination="BDr-eZ-zgI" eventType="valueChanged" id="RIA-IW-Boa"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1RK-Np-cKS">
+                                        <rect key="frame" x="20" y="227" width="200" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="changeColor:" destination="BDr-eZ-zgI" eventType="valueChanged" id="K98-Ry-CUu"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fz4-P8-hDq">
+                                        <rect key="frame" x="52" y="279" width="136" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Escolher Cor"/>
+                                        <connections>
+                                            <action selector="chooseColor:" destination="BDr-eZ-zgI" eventType="touchUpInside" id="56n-eG-M0F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="NO0-rB-A3s"/>
+                                    <constraint firstAttribute="width" constant="240" id="t59-Yi-p0h"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HJ9-HV-SNO"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rUu-hF-cAD" firstAttribute="centerY" secondItem="7fh-h7-lR4" secondAttribute="centerY" id="0SA-AY-qqC"/>
+                            <constraint firstItem="rUu-hF-cAD" firstAttribute="centerX" secondItem="7fh-h7-lR4" secondAttribute="centerX" id="dFz-bp-1fz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sliderBlue" destination="1RK-Np-cKS" id="ug1-yG-eOK"/>
+                        <outlet property="sliderGreen" destination="5GE-Dy-55w" id="hUe-Mp-VwV"/>
+                        <outlet property="sliderRed" destination="bLl-MH-EKi" id="bbN-sm-0Vh"/>
+                        <outlet property="viewColor" destination="6Fb-ju-JzO" id="PV9-WB-dcm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TIh-Ua-V1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242" y="-733"/>
+        </scene>
         <!--Mensagem-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -251,4 +330,12 @@
             <point key="canvasLocation" x="-321" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

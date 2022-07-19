@@ -6,5 +6,7 @@ class MessageColorViewController: BaseViewController {
         super.viewDidLoad()
     }
     
+    
+    
 }
 

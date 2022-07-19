@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00CDB9F928872BEA00991FA9 /* ColoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDB9F828872BEA00991FA9 /* ColoPickerViewController.swift */; };
 		00CF58A02885A897005FEE57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CF589F2885A897005FEE57 /* BaseViewController.swift */; };
 		A17132CE1F844BD600049020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17132CD1F844BD600049020 /* AppDelegate.swift */; };
 		A17132D01F844BD600049020 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17132CF1F844BD600049020 /* MessageViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00CDB9F828872BEA00991FA9 /* ColoPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoPickerViewController.swift; sourceTree = "<group>"; };
 		00CF589F2885A897005FEE57 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A17132CA1F844BD600049020 /* Mensagens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mensagens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17132CD1F844BD600049020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				A17132DF1F844D7300049020 /* MessageColorViewController.swift */,
 				A17132E11F844D7F00049020 /* ScreenColorViewController.swift */,
 				A17132E31F844D8E00049020 /* ResultViewController.swift */,
+				00CDB9F828872BEA00991FA9 /* ColoPickerViewController.swift */,
 				A17132D11F844BD600049020 /* Main.storyboard */,
 				A17132D61F844BD600049020 /* LaunchScreen.storyboard */,
 				A17132D41F844BD600049020 /* Assets.xcassets */,
@@ -155,6 +158,7 @@
 				A17132E41F844D8E00049020 /* ResultViewController.swift in Sources */,
 				A17132E21F844D7F00049020 /* ScreenColorViewController.swift in Sources */,
 				A17132D01F844BD600049020 /* MessageViewController.swift in Sources */,
+				00CDB9F928872BEA00991FA9 /* ColoPickerViewController.swift in Sources */,
 				A17132E61F844EB700049020 /* Message.swift in Sources */,
 				A17132E01F844D7300049020 /* MessageColorViewController.swift in Sources */,
 				00CF58A02885A897005FEE57 /* BaseViewController.swift in Sources */,
