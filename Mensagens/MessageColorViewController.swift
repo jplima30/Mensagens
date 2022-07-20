@@ -4,8 +4,8 @@ class MessageColorViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         lbMessage.text = message.text
+        lbMessage.textColor = message.textColor
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
