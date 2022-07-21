@@ -1,6 +1,6 @@
 import UIKit
 
-protocol ColorpickerProtocol: class {
+protocol ColorPickerDelegate: AnyObject {
     func applyColor(color: UIColor)
 }
 
@@ -11,14 +11,14 @@ class ColorPickerViewController: UIViewController {
     @IBOutlet weak var sliderGreen: UISlider!
     @IBOutlet weak var sliderBlue: UISlider!
     
-    weak var reference: MessageViewController?
+    weak var delegate: ColorPickerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func chooseColor(_ sender: UIButton) {
-        reference?.applyColor(color: viewColor.backgroundColor!)
+        delegate?.applyColor(color: viewColor.backgroundColor!)
         dismiss(animated: true, completion: nil)
     }
     

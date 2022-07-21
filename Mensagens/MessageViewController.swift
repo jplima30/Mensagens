@@ -11,21 +11,7 @@ class MessageViewController: BaseViewController {
         let viewController = segue.destination as! MessageColorViewController
         viewController.message = message
     }
-    
-    override func changeColor(_ sender: UIButton) {
-        let colorPicker = storyboard?.instantiateViewController(withIdentifier: "ColorPickerViewController") as! ColorPickerViewController
-        colorPicker.modalPresentationStyle = .overCurrentContext
-        colorPicker.reference = self
-        present(colorPicker, animated: true, completion: nil)
-    }
-    
-    func applyColor(color: UIColor) {
-        lbMessage.textColor = color
-        message.textColor = color
-    }
-    
 }
-
 extension MessageViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -34,5 +20,12 @@ extension MessageViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         
         return true
+    }
+}
+
+extension MessageViewController: ColorPickerDelegate {
+    func applyColor(color: UIColor) {
+        lbMessage.textColor = color
+        message.textColor = color
     }
 }
